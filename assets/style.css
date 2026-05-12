@@ -1,0 +1,256 @@
+/* ============================================================
+   Global Health Trend Analysis Dashboard — Power BI Style Theme
+   Clean, Light, Professional BI Look
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700;800&family=Roboto:wght@400;500&display=swap');
+
+/* ── CSS Variables ─────────────────────────────────────────── */
+:root {
+  --bg-primary:    #F3F2F1;
+  --bg-secondary:  #FFFFFF;
+  --bg-card:       #FFFFFF;
+  --border:        #E1DFDD;
+  --border-accent: #C8C6C4;
+  --text-primary:  #323130;
+  --text-secondary:#605E5C;
+  --text-muted:    #A19F9D;
+  --accent-blue:   #118DFF;
+  --accent-teal:   #41A9C9;
+  --accent-gold:   #E66C37;
+  --accent-red:    #B32824;
+  --accent-orange: #FF9A3C;
+  --accent-purple: #12239E;
+  --shadow-card:   0 1.2px 3.6px rgba(0,0,0,0.1), 0 0.3px 0.9px rgba(0,0,0,0.1);
+  --radius:        4px;
+  --radius-sm:     2px;
+  --transition:    all 0.15s ease;
+}
+
+/* ── Base Reset ────────────────────────────────────────────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body, html {
+  background: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  font-family: 'Segoe UI', Arial, sans-serif !important;
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── App Shell ─────────────────────────────────────────────── */
+#app-shell {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+/* ── Header ────────────────────────────────────────────────── */
+#header {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.header-subtitle {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.header-badge {
+  background: #E1DFDD;
+  color: var(--text-primary);
+  border-radius: 2px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* ── Navigation Tabs ───────────────────────────────────────── */
+.custom-tabs .nav-tabs {
+  border-bottom: 1px solid var(--border) !important;
+  background: var(--bg-secondary) !important;
+  padding: 0 24px;
+  gap: 0px;
+}
+
+.custom-tabs .nav-item .nav-link {
+  color: var(--text-secondary) !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 3px solid transparent !important;
+  padding: 12px 16px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  transition: var(--transition) !important;
+  border-radius: 0 !important;
+}
+
+.custom-tabs .nav-item .nav-link:hover {
+  color: var(--text-primary) !important;
+  background: #F3F2F1 !important;
+}
+
+.custom-tabs .nav-item .nav-link.active {
+  color: var(--accent-blue) !important;
+  background: transparent !important;
+  border-bottom: 3px solid var(--accent-blue) !important;
+}
+
+/* ── KPI Cards ─────────────────────────────────────────────── */
+.kpi-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+
+.kpi-icon {
+  font-size: 20px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.kpi-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.kpi-value {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--text-primary) !important; /* Override inline color */
+}
+
+.kpi-delta {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: 2px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+/* ── Chart Cards ───────────────────────────────────────────── */
+.chart-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-card);
+}
+
+.chart-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.chart-subtitle {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+/* ── Controls & Filters ────────────────────────────────────── */
+.filter-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-card);
+}
+
+.control-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+/* Dropdown overrides */
+.dash-dropdown .Select-control {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-accent) !important;
+  border-radius: var(--radius-sm) !important;
+  color: var(--text-primary) !important;
+}
+
+.dash-dropdown .Select-menu-outer {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-accent) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dash-dropdown .Select-option {
+  color: var(--text-primary) !important;
+}
+
+.dash-dropdown .Select-option:hover,
+.dash-dropdown .Select-option.is-focused {
+  background: #F3F2F1 !important;
+  color: var(--text-primary) !important;
+}
+
+/* ── Data Table ────────────────────────────────────────────── */
+.dash-table-container {
+  border-radius: var(--radius-sm) !important;
+}
+
+/* ── Animations ────────────────────────────────────────────── */
+.fade-in { animation: fadeIn 0.2s ease forwards; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.live-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* ── Insight Box ───────────────────────────────────────────── */
+.insight-box {
+  background: #F3F2F1;
+  border-left: 4px solid var(--accent-blue);
+  padding: 12px 16px;
+  margin-top: 12px;
+}
+
+.insight-box p {
+  color: var(--text-primary);
+  font-size: 12px;
+  margin: 0;
+}
+
+/* ── Footer ────────────────────────────────────────────────── */
+#footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg-secondary);
+  padding: 16px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 11px;
+  margin-top: 24px;
+}
