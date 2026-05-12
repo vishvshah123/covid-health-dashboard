@@ -318,6 +318,7 @@ def build_vax():
         color_discrete_sequence=["#00B4D8","#06D6A0","#FFD60A","#FF6B6B","#FF9A3C","#C77DFF"],
         size_max=45, opacity=0.85, trendline="ols")
     apply_theme(vax_scatter, height=400)
+    vax_scatter.update_yaxes(rangemode="nonnegative")
 
     # Vax rate by continent bar
     cont_vax = vax_df.groupby("Continent")["VaxPctFull"].mean().reset_index().sort_values("VaxPctFull")

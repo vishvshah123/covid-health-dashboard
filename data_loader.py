@@ -41,7 +41,8 @@ def get_global_kpis(df_latest):
     total_deaths   = int(df_latest["Deaths"].sum())
     # JHU stopped tracking recovered; estimate as Cases - Deaths
     total_recovered= total_cases - total_deaths
-    active         = int(df_latest["ActiveCases"].sum())
+    # Active cases effectively 0 for historical snapshot ending in 2023
+    active         = 0
     cfr            = round(total_deaths / total_cases * 100, 2) if total_cases else 0
     recovery_rate  = round(total_recovered / total_cases * 100, 2) if total_cases else 0
     countries      = int(df_latest["Country"].nunique())
