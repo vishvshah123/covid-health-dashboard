@@ -1,0 +1,34 @@
+# ─── Python cache ──────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.Python
+*.pyo
+
+# ─── Virtual environments ──────────────────────────────────────────────────────
+venv/
+env/
+.env
+.venv/
+
+# ─── Raw data (large files — processed/ is committed) ─────────────────────────
+data/raw/
+data/etl_log.txt
+
+# ─── Power BI temp files ───────────────────────────────────────────────────────
+*.pbix.lock
+*.pbix.tmp
+
+# ─── IDE / OS ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Secrets ───────────────────────────────────────────────────────────────────
+.env
+*.secret
+secrets.json
