@@ -1,4 +1,4 @@
-Global Health Analytics Dashboard (Python, Plotly Dash, Pandas) | Live App | GitHub
+Global Health Analytics Dashboard (Python, Plotly Dash, Pandas)
 
 Engineered an Automated ETL Pipeline: Developed a Python-based pipeline using Pandas to extract, clean, and transform millions of rows of raw COVID-19 and vaccination data from Johns Hopkins University and Our World in Data.
 Developed a Full-Stack Analytics Web App: Built a highly interactive, 6-page web dashboard entirely from scratch using Plotly Dash, bypassing traditional BI tools to allow for advanced custom logic and dynamic cross-filtering.
